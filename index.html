@@ -35,8 +35,6 @@
       text-decoration: none;
     }
 
-    /* NAVIGATION */
-
     nav {
       position: sticky;
       top: 0;
@@ -93,25 +91,21 @@
       font-size: 12px;
     }
 
-    .language-buttons button:hover {
+    .language-buttons button:hover,
+    .language-buttons button.active {
       background: white;
       color: var(--navy);
     }
 
-    /* HERO */
-
     .hero {
       min-height: 90vh;
-      background:
-        linear-gradient(
-          120deg,
-          #09101e 0%,
-          #101b31 55%,
-          #172743 100%
-        );
-
+      background: linear-gradient(
+        120deg,
+        #09101e 0%,
+        #101b31 55%,
+        #172743 100%
+      );
       color: white;
-
       display: flex;
       align-items: center;
       padding: 80px 10%;
@@ -121,7 +115,6 @@
       width: 100%;
       max-width: 1200px;
       margin: auto;
-
       display: grid;
       grid-template-columns: 1.5fr 0.7fr;
       gap: 70px;
@@ -189,34 +182,24 @@
       background: rgba(255,255,255,0.08);
     }
 
-    /* PHOTO */
-
     .photo-placeholder {
       width: 300px;
       height: 380px;
       border-radius: 18px;
-
       border: 1px solid rgba(255,255,255,0.18);
-
-      background:
-        linear-gradient(
-          145deg,
-          rgba(255,255,255,0.07),
-          rgba(255,255,255,0.02)
-        );
-
+      background: linear-gradient(
+        145deg,
+        rgba(255,255,255,0.07),
+        rgba(255,255,255,0.02)
+      );
       display: flex;
       align-items: center;
       justify-content: center;
-
       color: #9eacc1;
       text-align: center;
       padding: 30px;
-
       margin-left: auto;
     }
-
-    /* SECTIONS */
 
     section {
       padding: 85px 10%;
@@ -236,18 +219,13 @@
       margin-bottom: 35px;
     }
 
-    /* CARDS */
-
     .card {
       background: white;
       padding: 28px;
       border-radius: 13px;
       margin-bottom: 20px;
-
       border: 1px solid var(--border);
-
-      box-shadow:
-        0 8px 30px rgba(20,35,70,0.055);
+      box-shadow: 0 8px 30px rgba(20,35,70,0.055);
     }
 
     .card h3 {
@@ -275,25 +253,18 @@
       margin-bottom: 8px;
     }
 
-    /* SKILLS */
-
     .skills-grid {
       display: grid;
-      grid-template-columns:
-        repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 18px;
     }
 
     .skill-card {
       background: white;
-
       border: 1px solid var(--border);
       border-radius: 13px;
-
       padding: 24px;
-
-      box-shadow:
-        0 8px 30px rgba(20,35,70,0.05);
+      box-shadow: 0 8px 30px rgba(20,35,70,0.05);
     }
 
     .skill-card h3 {
@@ -305,28 +276,18 @@
       color: var(--muted);
     }
 
-    /* PROJECTS */
-
     .projects-grid {
       display: grid;
-
-      grid-template-columns:
-        repeat(auto-fit, minmax(250px, 1fr));
-
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
 
     .project-card {
       background: white;
-
       border: 1px solid var(--border);
-
       border-radius: 13px;
-
       padding: 26px;
-
-      box-shadow:
-        0 8px 30px rgba(20,35,70,0.05);
+      box-shadow: 0 8px 30px rgba(20,35,70,0.05);
     }
 
     .project-card h3 {
@@ -338,18 +299,11 @@
       color: var(--muted);
     }
 
-    /* CONTACT */
-
     .contact-box {
-      background:
-        linear-gradient(135deg, #0a1120, #17243d);
-
+      background: linear-gradient(135deg, #0a1120, #17243d);
       color: white;
-
       padding: 50px 35px;
-
       border-radius: 17px;
-
       text-align: center;
     }
 
@@ -363,8 +317,6 @@
       margin-bottom: 25px;
     }
 
-    /* FOOTER */
-
     footer {
       padding: 30px;
       text-align: center;
@@ -372,16 +324,11 @@
       font-size: 14px;
     }
 
-    /* LANGUAGE SYSTEM */
-
-    [data-lang="fr"] {
+    [data-lang] {
       display: none;
     }
 
-    /* MOBILE */
-
     @media (max-width: 950px) {
-
       .hero-wrapper {
         grid-template-columns: 1fr;
       }
@@ -408,28 +355,19 @@
         padding-right: 7%;
       }
     }
-
   </style>
 </head>
 
 <body>
 
-
-<!-- NAVIGATION -->
-
 <nav>
-
-  <div class="logo">
-    JA.
-  </div>
+  <div class="logo">JA.</div>
 
   <div class="nav-right">
-
     <div class="nav-links">
-
       <a href="#about">
         <span data-lang="en">About</span>
-        <span data-lang="fr">Profil</span>
+        <span data-lang="fr">À propos</span>
       </a>
 
       <a href="#experience">
@@ -461,36 +399,18 @@
         <span data-lang="en">Contact</span>
         <span data-lang="fr">Contact</span>
       </a>
-
     </div>
-
 
     <div class="language-buttons">
-
-      <button onclick="setLanguage('en')">
-        EN
-      </button>
-
-      <button onclick="setLanguage('fr')">
-        FR
-      </button>
-
+      <button id="enButton" onclick="setLanguage('en')">EN</button>
+      <button id="frButton" onclick="setLanguage('fr')">FR</button>
     </div>
-
   </div>
-
 </nav>
 
-
-
-<!-- HERO -->
-
 <header class="hero">
-
   <div class="hero-wrapper">
-
     <div>
-
       <p class="eyebrow" data-lang="en">
         Finance · Accounting · Reporting · Analysis
       </p>
@@ -499,85 +419,50 @@
         Finance · Comptabilité · Reporting · Analyse
       </p>
 
-
-      <h1>
-        Jeanne Avekor
-      </h1>
-
+      <h1>Jeanne Avekor</h1>
 
       <h2 data-lang="en">
         Finance & Accounting Professional
       </h2>
 
       <h2 data-lang="fr">
-        Professionnelle Finance & Comptabilité
+        Professionnelle de la Finance & de la Comptabilité
       </h2>
 
-
       <p class="hero-description" data-lang="en">
-
         Finance professional with experience in accounting,
         treasury, financial reporting, month-end closing and
-        financial analysis across international and
-        multi-entity environments.
-
+        financial analysis across international and multi-entity
+        environments.
       </p>
 
-
       <p class="hero-description" data-lang="fr">
-
         Professionnelle de la finance disposant d'une expérience
         en comptabilité, trésorerie, reporting financier,
         clôtures mensuelles et analyse financière dans des
         environnements internationaux et multi-entités.
-
       </p>
 
-
       <div class="hero-buttons">
-
-        <a
-          href="#experience"
-          class="btn btn-primary"
-          data-lang="en"
-        >
+        <a href="#experience" class="btn btn-primary" data-lang="en">
           View Experience
         </a>
 
-        <a
-          href="#experience"
-          class="btn btn-primary"
-          data-lang="fr"
-        >
+        <a href="#experience" class="btn btn-primary" data-lang="fr">
           Voir mon expérience
         </a>
 
-
-        <a
-          href="#contact"
-          class="btn btn-outline"
-          data-lang="en"
-        >
+        <a href="#contact" class="btn btn-outline" data-lang="en">
           Contact Me
         </a>
 
-        <a
-          href="#contact"
-          class="btn btn-outline"
-          data-lang="fr"
-        >
+        <a href="#contact" class="btn btn-outline" data-lang="fr">
           Me contacter
         </a>
-
       </div>
-
     </div>
 
-
-    <!-- PHOTO SPACE -->
-
     <div class="photo-placeholder">
-
       <span data-lang="en">
         Professional photo<br>
         can be added here later
@@ -585,21 +470,13 @@
 
       <span data-lang="fr">
         Une photo professionnelle<br>
-        pourra être ajoutée ici
+        pourra être ajoutée ici plus tard
       </span>
-
     </div>
-
   </div>
-
 </header>
 
-
-
-<!-- ABOUT -->
-
 <section id="about">
-
   <h2 class="section-title" data-lang="en">
     About Me
   </h2>
@@ -608,67 +485,41 @@
     À propos
   </h2>
 
-
   <p class="section-intro" data-lang="en">
-
     My background combines accounting, treasury,
     financial reporting and management control,
-    with a growing specialization in corporate
-    finance and financial analysis.
-
+    with a growing specialization in corporate finance
+    and financial analysis.
   </p>
 
-
   <p class="section-intro" data-lang="fr">
-
     Mon parcours associe comptabilité, trésorerie,
     reporting financier et contrôle de gestion,
     avec une spécialisation progressive en finance
     d'entreprise et analyse financière.
-
   </p>
 
-
   <div class="card">
-
     <p data-lang="en">
-
-      I am a finance and accounting professional with
-      experience in general accounting, treasury management,
-      financial reporting, month-end closing, VAT reporting
-      and financial control.
-
-      My academic and professional background has enabled
-      me to develop strong analytical, technical and
-      organizational skills.
-
+      I am a finance and accounting professional with experience
+      in general accounting, treasury management, financial reporting,
+      month-end closing, VAT reporting and financial control.
+      My academic and professional background has enabled me to develop
+      strong analytical, technical and organizational skills.
     </p>
-
 
     <p data-lang="fr">
-
-      Je suis une professionnelle de la finance et de la
-      comptabilité disposant d'une expérience en comptabilité
-      générale, gestion de trésorerie, reporting financier,
-      clôtures mensuelles, déclarations de TVA et contrôle
-      financier.
-
-      Mon parcours académique et professionnel m'a permis
-      de développer de solides compétences analytiques,
-      techniques et organisationnelles.
-
+      Je suis une professionnelle de la finance et de la comptabilité
+      disposant d'une expérience en comptabilité générale, gestion de
+      trésorerie, reporting financier, clôtures mensuelles,
+      déclarations de TVA et contrôle financier.
+      Mon parcours académique et professionnel m'a permis de développer
+      de solides compétences analytiques, techniques et organisationnelles.
     </p>
-
   </div>
-
 </section>
 
-
-
-<!-- EXPERIENCE -->
-
 <section id="experience">
-
   <h2 class="section-title" data-lang="en">
     Professional Experience
   </h2>
@@ -677,23 +528,11 @@
     Expérience professionnelle
   </h2>
 
-
-
-  <!-- CONTITRADE -->
-
   <div class="card">
+    <h3 data-lang="en">Accounting Consultant</h3>
+    <h3 data-lang="fr">Consultante comptable</h3>
 
-    <h3 data-lang="en">
-      Accounting Consultant
-    </h3>
-
-    <h3 data-lang="fr">
-      Consultante comptable
-    </h3>
-
-    <p class="company">
-      Contitrade
-    </p>
+    <p class="company">Contitrade</p>
 
     <p class="date" data-lang="en">
       January 2026 — Present
@@ -703,51 +542,33 @@
       Janvier 2026 — Aujourd'hui
     </p>
 
-
     <ul data-lang="en">
-
       <li>
         Clearing and reconciliation of approximately
         30,000 supplier invoices.
       </li>
-
       <li>
-        Control of accounting documents and
-        supporting records.
+        Control of accounting documents and supporting records.
       </li>
-
       <li>
-        Contribution to meeting financial
-        closing deadlines.
+        Contribution to meeting financial closing deadlines.
       </li>
-
     </ul>
 
-
     <ul data-lang="fr">
-
       <li>
         Apurement d'environ 30 000 factures fournisseurs.
       </li>
-
       <li>
         Contrôle de la conformité des pièces comptables.
       </li>
-
       <li>
         Contribution au respect des délais de clôture.
       </li>
-
     </ul>
-
   </div>
 
-
-
-  <!-- AIRBUS -->
-
   <div class="card">
-
     <h3 data-lang="en">
       General Accountant & Treasurer
     </h3>
@@ -756,81 +577,56 @@
       Comptable générale & Trésorière
     </h3>
 
-    <p class="company">
-      AIRBUS Protect
-    </p>
+    <p class="company">AIRBUS Protect</p>
 
-    <p class="date">
+    <p class="date" data-lang="en">
       September 2024 — November 2025
     </p>
 
+    <p class="date" data-lang="fr">
+      Septembre 2024 — Novembre 2025
+    </p>
 
     <ul data-lang="en">
-
       <li>
-        Managed multi-currency treasury activities
-        across France, the United Kingdom and Germany.
+        Managed multi-currency treasury activities across France,
+        the United Kingdom and Germany.
       </li>
-
       <li>
-        Participated in monthly closings and
-        financial reporting.
+        Participated in monthly closings and financial reporting.
       </li>
-
       <li>
-        Contributed to IFRS consolidated
-        financial statements.
+        Contributed to IFRS consolidated financial statements.
       </li>
-
       <li>
-        Prepared VAT declarations and monitored
-        supplier payments.
+        Prepared VAT declarations and monitored supplier payments.
       </li>
-
       <li>
         Monitored operational costs.
       </li>
-
     </ul>
 
-
     <ul data-lang="fr">
-
       <li>
-        Gestion de la trésorerie multidevises
-        sur les périmètres France, Royaume-Uni
-        et Allemagne.
+        Gestion de la trésorerie multidevises sur les périmètres
+        France, Royaume-Uni et Allemagne.
       </li>
-
       <li>
-        Participation aux clôtures mensuelles
-        et au reporting financier.
+        Participation aux clôtures mensuelles et au reporting financier.
       </li>
-
       <li>
-        Contribution à la production des états
-        financiers consolidés IFRS.
+        Contribution à la production des états financiers consolidés IFRS.
       </li>
-
       <li>
-        Déclarations de TVA et suivi des paiements
-        fournisseurs.
+        Déclarations de TVA et suivi des paiements fournisseurs.
       </li>
-
       <li>
         Contrôle des coûts opérationnels.
       </li>
-
     </ul>
-
   </div>
 
-
-
-  <!-- WE ARE CHERI -->
-
   <div class="card">
-
     <h3 data-lang="en">
       Assistant Accountant
     </h3>
@@ -839,68 +635,49 @@
       Assistante comptable
     </h3>
 
-    <p class="company">
-      We Are Cheri
-    </p>
+    <p class="company">We Are Cheri</p>
 
-    <p class="date">
+    <p class="date" data-lang="en">
       September 2023 — September 2024
     </p>
 
+    <p class="date" data-lang="fr">
+      Septembre 2023 — Septembre 2024
+    </p>
 
     <ul data-lang="en">
-
       <li>
-        Processed supplier invoices for
-        eight establishments.
+        Processed supplier invoices for eight establishments.
       </li>
-
       <li>
         Performed accounting document controls.
       </li>
-
       <li>
         Participated in monthly financial closings.
       </li>
-
       <li>
         Prepared VAT declarations.
       </li>
-
     </ul>
 
-
     <ul data-lang="fr">
-
       <li>
-        Traitement des factures fournisseurs
-        pour huit établissements.
+        Traitement des factures fournisseurs pour huit établissements.
       </li>
-
       <li>
         Contrôle des pièces comptables.
       </li>
-
       <li>
         Participation aux clôtures mensuelles.
       </li>
-
       <li>
         Déclarations de TVA.
       </li>
-
     </ul>
-
   </div>
-
 </section>
 
-
-
-<!-- EDUCATION -->
-
 <section id="education">
-
   <h2 class="section-title" data-lang="en">
     Education
   </h2>
@@ -909,9 +686,7 @@
     Formation
   </h2>
 
-
   <div class="card">
-
     <h3 data-lang="en">
       MSc Corporate Finance & Financial Engineering
     </h3>
@@ -920,19 +695,12 @@
       MSc Finance d'Entreprise & Ingénierie Financière
     </h3>
 
-    <p class="company">
-      INSEEC Paris
-    </p>
+    <p class="company">INSEEC Paris</p>
 
-    <p class="date">
-      2026
-    </p>
-
+    <p class="date">2026</p>
   </div>
 
-
   <div class="card">
-
     <h3 data-lang="en">
       Master's in Audit & Management Control
     </h3>
@@ -941,19 +709,12 @@
       Master Audit & Contrôle de Gestion
     </h3>
 
-    <p class="company">
-      ESG Toulouse
-    </p>
+    <p class="company">ESG Toulouse</p>
 
-    <p class="date">
-      2024
-    </p>
-
+    <p class="date">2024</p>
   </div>
 
-
   <div class="card">
-
     <h3 data-lang="en">
       Bachelor's in Accounting, Control & Audit
     </h3>
@@ -966,20 +727,11 @@
       University of Lomé · Togo
     </p>
 
-    <p class="date">
-      2021
-    </p>
-
+    <p class="date">2021</p>
   </div>
-
 </section>
 
-
-
-<!-- SKILLS -->
-
 <section id="skills">
-
   <h2 class="section-title" data-lang="en">
     Skills & Tools
   </h2>
@@ -988,19 +740,10 @@
     Compétences & Outils
   </h2>
 
-
   <div class="skills-grid">
 
-
     <div class="skill-card">
-
-      <h3 data-lang="en">
-        Finance
-      </h3>
-
-      <h3 data-lang="fr">
-        Finance
-      </h3>
+      <h3>Finance</h3>
 
       <p data-lang="en">
         Financial analysis, treasury,
@@ -1013,47 +756,33 @@
         reporting financier, contrôle
         de gestion et comptabilité.
       </p>
-
     </div>
 
-
-
     <div class="skill-card">
-
       <h3>
         Data & Reporting
       </h3>
 
       <p>
-        Advanced Excel · Power BI ·
-        Financial Reporting
+        Advanced Excel · Power BI · Financial Reporting
       </p>
-
     </div>
 
-
-
     <div class="skill-card">
-
       <h3 data-lang="en">
         ERP & Accounting Tools
       </h3>
 
       <h3 data-lang="fr">
-        ERP & Outils Comptables
+        ERP & Outils comptables
       </h3>
 
       <p>
-        SAP · Cegid · Sage ·
-        Microsoft Office
+        SAP · Cegid · Sage · Microsoft Office
       </p>
-
     </div>
 
-
-
     <div class="skill-card">
-
       <h3 data-lang="en">
         Languages
       </h3>
@@ -1071,27 +800,17 @@
         Français — Langue maternelle<br>
         Anglais — B2
       </p>
-
     </div>
 
-
   </div>
-
 </section>
 
-
-
-<!-- CERTIFICATIONS -->
-
 <section id="certifications">
-
   <h2 class="section-title">
     Certifications
   </h2>
 
-
   <div class="card">
-
     <h3>
       FMVA
     </h3>
@@ -1099,12 +818,9 @@
     <p>
       Corporate Finance Institute · 2026
     </p>
-
   </div>
 
-
   <div class="card">
-
     <h3>
       Excel for Finance
     </h3>
@@ -1112,12 +828,9 @@
     <p>
       Corporate Finance Institute · 2026
     </p>
-
   </div>
 
-
   <div class="card">
-
     <h3>
       CFA Level I
     </h3>
@@ -1129,49 +842,33 @@
     <p data-lang="fr">
       En cours
     </p>
-
   </div>
-
 </section>
 
-
-
-<!-- PROJECTS -->
-
 <section id="projects">
-
   <h2 class="section-title" data-lang="en">
     Selected Projects
   </h2>
 
   <h2 class="section-title" data-lang="fr">
-    Projets
+    Projets sélectionnés
   </h2>
 
-
   <p class="section-intro" data-lang="en">
-
     A selection of finance, Excel, Power BI
     and financial analysis projects will be
     presented here.
-
   </p>
 
-
   <p class="section-intro" data-lang="fr">
-
     Une sélection de projets en finance,
     Excel, Power BI et analyse financière
     sera présentée ici.
-
   </p>
-
 
   <div class="projects-grid">
 
-
     <div class="project-card">
-
       <h3 data-lang="en">
         Financial Analysis
       </h3>
@@ -1187,62 +884,42 @@
 
       <p data-lang="fr">
         Analyse d'entreprise, ratios financiers,
-        performance et valorisation.
+        étude de la performance et valorisation.
       </p>
-
     </div>
 
-
-
     <div class="project-card">
-
       <h3>
         Excel Finance Model
       </h3>
 
       <p data-lang="en">
-        Financial modelling and
-        Excel-based analysis.
+        Financial modelling and Excel-based analysis.
       </p>
 
       <p data-lang="fr">
-        Modélisation financière et
-        analyse sous Excel.
+        Modélisation financière et analyse sous Excel.
       </p>
-
     </div>
 
-
-
     <div class="project-card">
-
       <h3>
         Power BI Dashboard
       </h3>
 
       <p data-lang="en">
-        Financial reporting and
-        interactive dashboards.
+        Financial reporting and interactive dashboards.
       </p>
 
       <p data-lang="fr">
-        Reporting financier et
-        tableaux de bord interactifs.
+        Reporting financier et tableaux de bord interactifs.
       </p>
-
     </div>
 
-
   </div>
-
 </section>
 
-
-
-<!-- CONTACT -->
-
 <section id="contact">
-
   <div class="contact-box">
 
     <h2 data-lang="en">
@@ -1252,7 +929,6 @@
     <h2 data-lang="fr">
       Restons en contact
     </h2>
-
 
     <p data-lang="en">
       Interested in my professional background,
@@ -1265,7 +941,6 @@
       projets en finance ?
     </p>
 
-
     <a
       href="mailto:jean.avk@gmail.com"
       class="btn btn-primary"
@@ -1273,7 +948,6 @@
     >
       Email Me
     </a>
-
 
     <a
       href="mailto:jean.avk@gmail.com"
@@ -1284,15 +958,9 @@
     </a>
 
   </div>
-
 </section>
 
-
-
-<!-- FOOTER -->
-
 <footer>
-
   <span data-lang="en">
     © 2026 Jeanne Avekor · Finance Portfolio
   </span>
@@ -1300,68 +968,56 @@
   <span data-lang="fr">
     © 2026 Jeanne Avekor · Portfolio Finance
   </span>
-
 </footer>
 
-
-
-<!-- LANGUAGE SCRIPT -->
-
 <script>
-
   function setLanguage(language) {
 
-    const englishElements =
-      document.querySelectorAll('[data-lang="en"]');
+    const allLanguageElements =
+      document.querySelectorAll('[data-lang]');
 
-    const frenchElements =
-      document.querySelectorAll('[data-lang="fr"]');
+    allLanguageElements.forEach(function(element) {
 
+      if (element.getAttribute('data-lang') === language) {
+        element.style.display = '';
+      } else {
+        element.style.display = 'none';
+      }
+
+    });
+
+    document.documentElement.lang = language;
+
+    const enButton = document.getElementById('enButton');
+    const frButton = document.getElementById('frButton');
+
+    enButton.classList.remove('active');
+    frButton.classList.remove('active');
 
     if (language === 'fr') {
-
-      englishElements.forEach(
-        element => element.style.display = 'none'
-      );
-
-      frenchElements.forEach(
-        element => element.style.display = ''
-      );
-
-      document.documentElement.lang = 'fr';
-
-    }
-
-    else {
-
-      frenchElements.forEach(
-        element => element.style.display = 'none'
-      );
-
-      englishElements.forEach(
-        element => element.style.display = ''
-      );
-
-      document.documentElement.lang = 'en';
-
+      frButton.classList.add('active');
+    } else {
+      enButton.classList.add('active');
     }
 
     localStorage.setItem(
       'portfolioLanguage',
       language
     );
-
   }
 
+  window.addEventListener(
+    'DOMContentLoaded',
+    function() {
 
-  const savedLanguage =
-    localStorage.getItem('portfolioLanguage') || 'en';
+      const savedLanguage =
+        localStorage.getItem('portfolioLanguage') || 'en';
 
+      setLanguage(savedLanguage);
 
-  setLanguage(savedLanguage);
-
+    }
+  );
 </script>
-
 
 </body>
 </html>
