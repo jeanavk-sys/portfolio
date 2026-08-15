@@ -15,80 +15,118 @@
     }
 
     body {
-      font-family: Arial, sans-serif;
-      background: #f7f8fa;
-      color: #1d2939;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fb;
+      color: #172033;
       line-height: 1.6;
     }
 
+    a {
+      text-decoration: none;
+    }
+
     nav {
-      background: #0f172a;
+      background: #0b1324;
       padding: 18px 8%;
       display: flex;
       justify-content: space-between;
       align-items: center;
       position: sticky;
       top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
     nav h2 {
-      color: white;
+      color: #ffffff;
+      letter-spacing: 1px;
     }
 
-    nav a {
-      color: #dbe4f0;
-      text-decoration: none;
-      margin-left: 22px;
+    .links {
+      display: flex;
+      gap: 24px;
     }
 
-    nav a:hover {
-      color: white;
+    .links a {
+      color: #d8dfeb;
+      font-size: 15px;
+    }
+
+    .links a:hover {
+      color: #ffffff;
     }
 
     .hero {
-      min-height: 85vh;
-      background: #0f172a;
+      min-height: 88vh;
+      background: linear-gradient(135deg, #0b1324, #18233b);
       color: white;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
+      align-items: center;
       padding: 80px 10%;
     }
 
-    .hero p:first-child {
-      color: #94a3b8;
-      font-size: 18px;
-      margin-bottom: 10px;
+    .hero-content {
+      max-width: 760px;
+    }
+
+    .eyebrow {
+      color: #9fb0c9;
+      font-size: 16px;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
     }
 
     .hero h1 {
-      font-size: 60px;
-      margin-bottom: 10px;
+      font-size: 64px;
+      line-height: 1.05;
+      margin-bottom: 18px;
     }
 
     .hero h2 {
       font-size: 30px;
-      font-weight: normal;
-      color: #cbd5e1;
-      margin-bottom: 25px;
+      color: #dbe5f4;
+      font-weight: 500;
+      margin-bottom: 22px;
     }
 
-    .hero-description {
-      max-width: 650px;
+    .hero p {
       font-size: 18px;
-      color: #cbd5e1;
+      color: #c4cede;
+      max-width: 700px;
     }
 
-    .button {
+    .hero-buttons {
+      margin-top: 32px;
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
       display: inline-block;
-      margin-top: 30px;
-      padding: 13px 25px;
+      padding: 13px 22px;
+      border-radius: 7px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
       background: white;
-      color: #0f172a;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-      width: fit-content;
+      color: #0b1324;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,0.35);
+      color: white;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.08);
     }
 
     section {
@@ -97,63 +135,138 @@
       margin: auto;
     }
 
-    section h2 {
-      font-size: 32px;
-      margin-bottom: 30px;
-      color: #0f172a;
+    .section-title {
+      font-size: 34px;
+      margin-bottom: 14px;
+      color: #0b1324;
+    }
+
+    .section-intro {
+      color: #667085;
+      max-width: 760px;
+      margin-bottom: 34px;
     }
 
     .card {
       background: white;
+      border-radius: 12px;
       padding: 28px;
-      border-radius: 10px;
       margin-bottom: 20px;
-      box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+      box-shadow: 0 8px 30px rgba(20, 35, 70, 0.07);
+      border: 1px solid #e8edf5;
     }
 
     .card h3 {
-      margin-bottom: 5px;
+      font-size: 21px;
+      margin-bottom: 4px;
+    }
+
+    .company {
+      font-weight: 700;
+      color: #334155;
+      margin-bottom: 2px;
     }
 
     .date {
-      color: #667085;
+      color: #7b8798;
       margin-bottom: 15px;
+      font-size: 14px;
     }
 
-    ul {
+    .card ul {
       padding-left: 20px;
     }
 
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
+    .card li {
+      margin-bottom: 7px;
     }
 
-    .skill {
-      background: #e9eef5;
-      padding: 10px 17px;
-      border-radius: 20px;
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
     }
 
-    .contact {
+    .skill-card {
+      background: white;
+      border: 1px solid #e8edf5;
+      border-radius: 12px;
+      padding: 22px;
+      box-shadow: 0 8px 30px rgba(20, 35, 70, 0.05);
+    }
+
+    .skill-card h3 {
+      margin-bottom: 10px;
+      color: #0b1324;
+    }
+
+    .skill-card p {
+      color: #667085;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 12px;
+      padding: 26px;
+      border: 1px solid #e8edf5;
+      box-shadow: 0 8px 30px rgba(20, 35, 70, 0.05);
+    }
+
+    .project-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      color: #667085;
+    }
+
+    .contact-box {
+      background: #0b1324;
+      color: white;
+      border-radius: 16px;
+      padding: 45px;
       text-align: center;
+    }
+
+    .contact-box h2 {
+      font-size: 34px;
+      margin-bottom: 12px;
+    }
+
+    .contact-box p {
+      color: #c6d0df;
+      margin-bottom: 24px;
     }
 
     footer {
-      background: #0f172a;
-      color: #94a3b8;
       text-align: center;
-      padding: 30px;
+      padding: 28px;
+      color: #7b8798;
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 800px) {
       .hero h1 {
-        font-size: 42px;
+        font-size: 46px;
       }
 
-      nav .links {
+      .hero h2 {
+        font-size: 24px;
+      }
+
+      .links {
         display: none;
+      }
+
+      section,
+      .hero {
+        padding-left: 7%;
+        padding-right: 7%;
       }
     }
   </style>
@@ -170,96 +283,105 @@
       <a href="#education">Education</a>
       <a href="#skills">Skills</a>
       <a href="#certifications">Certifications</a>
+      <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
 
 
-  <div class="hero">
+  <header class="hero">
+    <div class="hero-content">
 
-    <p>Hello, I'm</p>
+      <p class="eyebrow">Finance · Accounting · Reporting</p>
 
-    <h1>Jeanne Avekor</h1>
+      <h1>Jeanne Avekor</h1>
 
-    <h2>Finance & Accounting Professional</h2>
+      <h2>Finance & Accounting Professional</h2>
 
-    <p class="hero-description">
-      Finance professional with experience in accounting,
-      treasury, financial reporting and financial analysis
-      across international and multi-entity environments.
-    </p>
+      <p>
+        Finance professional with experience in accounting, treasury,
+        financial reporting, month-end closing and financial analysis
+        across international and multi-entity environments.
+      </p>
 
-    <a class="button" href="#experience">
-      View my experience
-    </a>
+      <div class="hero-buttons">
+        <a href="#experience" class="btn btn-primary">
+          View Experience
+        </a>
 
-  </div>
+        <a href="#contact" class="btn btn-secondary">
+          Contact Me
+        </a>
+      </div>
+
+    </div>
+  </header>
 
 
   <section id="about">
+    <h2 class="section-title">About Me</h2>
 
-    <h2>About Me</h2>
+    <p class="section-intro">
+      My background combines accounting, treasury and financial reporting,
+      with a growing specialization in corporate finance and financial analysis.
+    </p>
 
     <div class="card">
       <p>
-        I am a finance and accounting professional with experience
-        in general accounting, treasury management, financial reporting,
-        month-end closing and financial control.
+        I am a finance and accounting professional with experience in general
+        accounting, treasury management, financial reporting, month-end closing,
+        VAT reporting and financial control.
       </p>
 
       <br>
 
       <p>
-        With a Master's degree in Audit and Management Control,
-        I am continuing to develop my expertise in corporate finance
-        and financial engineering.
+        I hold a Master's degree in Audit and Management Control and continue
+        to strengthen my expertise in corporate finance and financial engineering.
       </p>
     </div>
-
   </section>
 
 
   <section id="experience">
+    <h2 class="section-title">Professional Experience</h2>
 
-    <h2>Professional Experience</h2>
+    <p class="section-intro">
+      Experience across accounting, treasury, reporting and financial operations.
+    </p>
 
 
     <div class="card">
-
-      <h3>Accounting Consultant — Contitrade</h3>
-
+      <h3>Accounting Consultant</h3>
+      <p class="company">Contitrade</p>
       <p class="date">January 2026 — Present</p>
 
       <ul>
         <li>Clearing and reconciliation of approximately 30,000 supplier invoices.</li>
-        <li>Review and control of accounting documentation.</li>
+        <li>Control of accounting documents and supporting records.</li>
         <li>Contribution to meeting financial closing deadlines.</li>
       </ul>
-
     </div>
 
 
     <div class="card">
-
-      <h3>General Accountant & Treasurer — AIRBUS Protect</h3>
-
+      <h3>General Accountant & Treasurer</h3>
+      <p class="company">AIRBUS Protect</p>
       <p class="date">September 2024 — November 2025</p>
 
       <ul>
         <li>Managed multi-currency treasury activities across France, the UK and Germany.</li>
         <li>Participated in monthly closings and financial reporting.</li>
         <li>Contributed to IFRS consolidated financial statements.</li>
-        <li>Managed VAT declarations and supplier payments.</li>
+        <li>Prepared VAT declarations and followed supplier payments.</li>
         <li>Monitored operational costs.</li>
       </ul>
-
     </div>
 
 
     <div class="card">
-
-      <h3>Assistant Accountant — We Are Cheri</h3>
-
+      <h3>Assistant Accountant</h3>
+      <p class="company">We Are Cheri</p>
       <p class="date">September 2023 — September 2024</p>
 
       <ul>
@@ -268,113 +390,142 @@
         <li>Participated in monthly financial closings.</li>
         <li>Prepared VAT declarations.</li>
       </ul>
-
     </div>
 
   </section>
 
 
   <section id="education">
-
-    <h2>Education</h2>
-
+    <h2 class="section-title">Education</h2>
 
     <div class="card">
-
       <h3>MSc Corporate Finance & Financial Engineering</h3>
-
-      <p>INSEEC Paris</p>
-
+      <p class="company">INSEEC Paris</p>
       <p class="date">2026</p>
-
     </div>
 
-
     <div class="card">
-
-      <h3>Master's — Audit & Management Control</h3>
-
-      <p>ESG Toulouse</p>
-
+      <h3>Master's in Audit & Management Control</h3>
+      <p class="company">ESG Toulouse</p>
       <p class="date">2024</p>
-
     </div>
-
 
     <div class="card">
-
-      <h3>Bachelor's — Accounting, Control & Audit</h3>
-
-      <p>University of Lomé, Togo</p>
-
+      <h3>Bachelor's in Accounting, Control & Audit</h3>
+      <p class="company">University of Lomé, Togo</p>
       <p class="date">2021</p>
-
     </div>
-
   </section>
 
 
   <section id="skills">
+    <h2 class="section-title">Skills & Tools</h2>
 
-    <h2>Skills & Tools</h2>
+    <div class="skills-grid">
 
-    <div class="skills">
+      <div class="skill-card">
+        <h3>Finance</h3>
+        <p>
+          Financial analysis, treasury management, financial reporting,
+          management control and accounting.
+        </p>
+      </div>
 
-      <span class="skill">Financial Reporting</span>
-      <span class="skill">Financial Analysis</span>
-      <span class="skill">Accounting</span>
-      <span class="skill">Treasury</span>
-      <span class="skill">Management Control</span>
-      <span class="skill">Excel Advanced</span>
-      <span class="skill">Power BI</span>
-      <span class="skill">SAP</span>
-      <span class="skill">Cegid</span>
-      <span class="skill">Sage</span>
-      <span class="skill">Microsoft Office</span>
+      <div class="skill-card">
+        <h3>Data & Reporting</h3>
+        <p>
+          Advanced Excel, Power BI and financial reporting.
+        </p>
+      </div>
+
+      <div class="skill-card">
+        <h3>ERP & Accounting Tools</h3>
+        <p>
+          SAP, Cegid, Sage and Microsoft Office.
+        </p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Languages</h3>
+        <p>
+          French: Native<br>
+          English: C1
+        </p>
+      </div>
 
     </div>
-
   </section>
 
 
   <section id="certifications">
-
-    <h2>Certifications</h2>
+    <h2 class="section-title">Certifications</h2>
 
     <div class="card">
       <h3>FMVA</h3>
-      <p>Corporate Finance Institute — 2026</p>
+      <p>Corporate Finance Institute · 2026</p>
     </div>
 
     <div class="card">
       <h3>Excel for Finance</h3>
-      <p>Corporate Finance Institute — 2026</p>
+      <p>Corporate Finance Institute · 2026</p>
     </div>
-
   </section>
 
 
-  <section id="contact" class="contact">
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
 
-    <h2>Let's Connect</h2>
-
-    <p>
-      Interested in my professional background or want to connect?
+    <p class="section-intro">
+      This section will showcase selected finance, Excel, Power BI and
+      financial analysis projects.
     </p>
 
-    <p>
-      📍 Compiègne, France
-    </p>
+    <div class="projects-grid">
 
-    <a class="button" href="mailto:jean.avk@gmail.com">
-      Contact Me
-    </a>
+      <div class="project-card">
+        <h3>Financial Analysis Project</h3>
+        <p>
+          Coming soon — company analysis, financial ratios and performance review.
+        </p>
+      </div>
 
+      <div class="project-card">
+        <h3>Excel Finance Model</h3>
+        <p>
+          Coming soon — Excel-based financial model or dashboard.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h3>Power BI Dashboard</h3>
+        <p>
+          Coming soon — interactive financial reporting dashboard.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="contact">
+    <div class="contact-box">
+
+      <h2>Let's Connect</h2>
+
+      <p>
+        Interested in my professional background, experience or projects?
+      </p>
+
+      <a href="mailto:jean.avk@gmail.com" class="btn btn-primary">
+        Email Me
+      </a>
+
+    </div>
   </section>
 
 
   <footer>
-    <p>© 2026 Jeanne Avekor · Finance Portfolio</p>
+    © 2026 Jeanne Avekor · Finance Portfolio
   </footer>
 
 </body>
