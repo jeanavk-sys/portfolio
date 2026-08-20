@@ -47,6 +47,8 @@
       text-decoration: none;
     }
 
+    /* NAVIGATION */
+
     nav {
       position: fixed;
       top: 0;
@@ -57,8 +59,7 @@
       background: rgba(6, 14, 27, 0.94);
       backdrop-filter: blur(10px);
 
-      border-bottom:
-        1px solid rgba(255,255,255,0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
 
       display: flex;
       justify-content: space-between;
@@ -96,12 +97,11 @@
       color: white;
     }
 
+    /* LANGUAGE */
+
     .languages {
       display: flex;
-
-      border:
-        1px solid rgba(255,255,255,0.25);
-
+      border: 1px solid rgba(255,255,255,0.25);
       border-radius: 7px;
       overflow: hidden;
     }
@@ -110,9 +110,7 @@
       border: 0;
       background: transparent;
       color: white;
-
       padding: 8px 11px;
-
       cursor: pointer;
       font-weight: 700;
       font-size: 12px;
@@ -122,6 +120,8 @@
       background: white;
       color: var(--navy);
     }
+
+    /* HERO */
 
     .hero {
       min-height: 100vh;
@@ -143,8 +143,7 @@
       background-size: cover;
       background-position: center;
 
-      transition:
-        background-image 1s ease-in-out;
+      transition: background-image 1s ease-in-out;
     }
 
     .hero-content {
@@ -211,13 +210,11 @@
 
     .btn-outline {
       color: white;
-      border:
-        1px solid rgba(255,255,255,0.45);
+      border: 1px solid rgba(255,255,255,0.45);
     }
 
     .btn-outline:hover {
-      background:
-        rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.10);
     }
 
     .slide-dots {
@@ -232,8 +229,7 @@
     .dot {
       width: 28px;
       height: 4px;
-      background:
-        rgba(255,255,255,0.35);
+      background: rgba(255,255,255,0.35);
       border-radius: 10px;
       transition: 0.3s;
     }
@@ -242,6 +238,8 @@
       background: white;
       width: 45px;
     }
+
+    /* GENERAL SECTIONS */
 
     section {
       max-width: 1200px;
@@ -271,35 +269,38 @@
       margin-bottom: 38px;
     }
 
+    /* ABOUT */
+
     .about-box {
       background: white;
-      border:
-        1px solid var(--border);
+      border: 1px solid var(--border);
       border-radius: 14px;
       padding: 34px;
+
       box-shadow:
-        0 10px 35px
-        rgba(14,30,60,0.055);
+        0 10px 35px rgba(14,30,60,0.055);
     }
+
+    /* EXPERIENCE */
 
     .experience-card {
       background: white;
-      border:
-        1px solid var(--border);
+      border: 1px solid var(--border);
       border-radius: 14px;
       padding: 30px;
       margin-bottom: 22px;
+
       box-shadow:
-        0 8px 30px
-        rgba(20,35,70,0.05);
+        0 8px 30px rgba(20,35,70,0.05);
+
       transition: 0.2s;
     }
 
     .experience-card:hover {
       transform: translateY(-3px);
+
       box-shadow:
-        0 14px 40px
-        rgba(20,35,70,0.08);
+        0 14px 40px rgba(20,35,70,0.08);
     }
 
     .experience-card h3 {
@@ -327,22 +328,25 @@
       margin-bottom: 7px;
     }
 
+    /* EDUCATION */
+
     .education-grid {
       display: grid;
+
       grid-template-columns:
         repeat(auto-fit, minmax(250px,1fr));
+
       gap: 20px;
     }
 
     .education-card {
       background: white;
-      border:
-        1px solid var(--border);
+      border: 1px solid var(--border);
       border-radius: 14px;
       padding: 28px;
+
       box-shadow:
-        0 8px 30px
-        rgba(20,35,70,0.05);
+        0 8px 30px rgba(20,35,70,0.05);
     }
 
     .education-card h3 {
@@ -351,22 +355,25 @@
       font-size: 19px;
     }
 
+    /* SKILLS */
+
     .skills-grid {
       display: grid;
+
       grid-template-columns:
         repeat(auto-fit, minmax(220px,1fr));
+
       gap: 18px;
     }
 
     .skill-card {
       background: white;
-      border:
-        1px solid var(--border);
+      border: 1px solid var(--border);
       border-radius: 14px;
       padding: 25px;
+
       box-shadow:
-        0 8px 30px
-        rgba(20,35,70,0.045);
+        0 8px 30px rgba(20,35,70,0.045);
     }
 
     .skill-card h3 {
@@ -378,22 +385,20 @@
       color: var(--muted);
     }
 
+    /* CERTIFICATIONS */
+
     .cert-grid {
       display: grid;
+
       grid-template-columns:
         repeat(auto-fit, minmax(240px,1fr));
+
       gap: 20px;
     }
 
     .cert-card {
-      background:
-        linear-gradient(
-          145deg,
-          #ffffff,
-          #f9fafc
-        );
-      border:
-        1px solid var(--border);
+      background: linear-gradient(145deg,#ffffff,#f9fafc);
+      border: 1px solid var(--border);
       border-radius: 14px;
       padding: 27px;
     }
@@ -413,31 +418,35 @@
       color: #44546a;
     }
 
+    /* PROJECTS */
+
     .projects-grid {
       display: grid;
+
       grid-template-columns:
         repeat(auto-fit, minmax(260px,1fr));
+
       gap: 20px;
     }
 
     .project-card {
       background: white;
-      border:
-        1px solid var(--border);
+      border: 1px solid var(--border);
       border-radius: 14px;
       padding: 28px;
-      min-height: 250px;
+      min-height: 260px;
+
       box-shadow:
-        0 8px 30px
-        rgba(20,35,70,0.045);
+        0 8px 30px rgba(20,35,70,0.045);
+
       transition: 0.25s;
     }
 
     .project-card:hover {
       transform: translateY(-4px);
+
       box-shadow:
-        0 14px 40px
-        rgba(20,35,70,0.09);
+        0 14px 40px rgba(20,35,70,0.09);
     }
 
     .project-number {
@@ -459,11 +468,15 @@
       display: inline-block;
       margin-top: 22px;
       padding: 11px 18px;
+
       background: var(--navy);
       color: white;
+
       border-radius: 7px;
+
       font-size: 14px;
       font-weight: 700;
+
       transition: 0.2s;
     }
 
@@ -480,6 +493,8 @@
       font-weight: 700;
     }
 
+    /* CONTACT */
+
     .contact-section {
       padding-bottom: 90px;
     }
@@ -491,6 +506,7 @@
           #081120,
           #172943
         );
+
       border-radius: 18px;
       color: white;
       padding: 55px 40px;
@@ -514,7 +530,10 @@
       font-size: 14px;
     }
 
+    /* RESPONSIVE */
+
     @media (max-width: 950px) {
+
       .nav-links {
         display: none;
       }
@@ -530,9 +549,11 @@
       .hero-description {
         font-size: 16px;
       }
+
     }
 
     @media (max-width: 550px) {
+
       nav {
         padding: 14px 5%;
       }
@@ -560,12 +581,17 @@
       .contact-box {
         padding: 42px 22px;
       }
+
     }
 
   </style>
 </head>
 
+
 <body>
+
+
+<!-- NAVIGATION -->
 
 <nav>
 
@@ -577,43 +603,64 @@
 
     <div class="nav-links">
 
-      <a href="#about" data-en="About" data-fr="À propos">
+      <a href="#about"
+         data-en="About"
+         data-fr="À propos">
         About
       </a>
 
-      <a href="#experience" data-en="Experience" data-fr="Expérience">
+      <a href="#experience"
+         data-en="Experience"
+         data-fr="Expérience">
         Experience
       </a>
 
-      <a href="#education" data-en="Education" data-fr="Formation">
+      <a href="#education"
+         data-en="Education"
+         data-fr="Formation">
         Education
       </a>
 
-      <a href="#skills" data-en="Skills" data-fr="Compétences">
+      <a href="#skills"
+         data-en="Skills"
+         data-fr="Compétences">
         Skills
       </a>
 
-      <a href="#certifications" data-en="Certifications" data-fr="Certifications">
+      <a href="#certifications"
+         data-en="Certifications"
+         data-fr="Certifications">
         Certifications
       </a>
 
-      <a href="#projects" data-en="Projects" data-fr="Projets">
+      <a href="#projects"
+         data-en="Projects"
+         data-fr="Projets">
         Projects
       </a>
 
-      <a href="#contact" data-en="Contact" data-fr="Contact">
+      <a href="#contact"
+         data-en="Contact"
+         data-fr="Contact">
         Contact
       </a>
 
     </div>
 
+
     <div class="languages">
 
-      <button id="btn-en" onclick="changeLanguage('en')">
+      <button
+        id="btn-en"
+        onclick="changeLanguage('en')"
+      >
         EN
       </button>
 
-      <button id="btn-fr" onclick="changeLanguage('fr')">
+      <button
+        id="btn-fr"
+        onclick="changeLanguage('fr')"
+      >
         FR
       </button>
 
@@ -622,6 +669,9 @@
   </div>
 
 </nav>
+
+
+<!-- HERO -->
 
 <header class="hero" id="hero">
 
@@ -653,10 +703,11 @@
       data-fr="Professionnelle de la finance disposant d'une expérience en comptabilité, trésorerie, reporting financier, clôtures mensuelles et analyse financière dans des environnements internationaux et multi-entités."
     >
       Finance professional with experience in accounting,
-      treasury, financial reporting, month-end closing
-      and financial analysis across international
-      and multi-entity environments.
+      treasury, financial reporting, month-end closing and
+      financial analysis across international and multi-entity
+      environments.
     </p>
+
 
     <div class="hero-buttons">
 
@@ -682,13 +733,19 @@
 
   </div>
 
+
   <div class="slide-dots">
+
     <div class="dot active" id="dot0"></div>
     <div class="dot" id="dot1"></div>
     <div class="dot" id="dot2"></div>
+
   </div>
 
 </header>
+
+
+<!-- ABOUT -->
 
 <section id="about">
 
@@ -713,8 +770,10 @@
     data-en="My background combines accounting, treasury, financial reporting and management control, with a growing specialization in corporate finance and financial analysis."
     data-fr="Mon parcours associe comptabilité, trésorerie, reporting financier et contrôle de gestion, avec une spécialisation progressive en finance d'entreprise et analyse financière."
   >
-    My background combines accounting,
-    treasury, financial reporting and management control.
+    My background combines accounting, treasury,
+    financial reporting and management control,
+    with a growing specialization in corporate finance
+    and financial analysis.
   </p>
 
   <div class="about-box">
@@ -731,6 +790,9 @@
   </div>
 
 </section>
+
+
+<!-- EXPERIENCE -->
 
 <section id="experience">
 
@@ -749,6 +811,7 @@
   >
     Professional Experience
   </h2>
+
 
   <div class="experience-card">
 
@@ -777,7 +840,8 @@
         data-en="Clearing and reconciliation of approximately 30,000 supplier invoices."
         data-fr="Apurement et rapprochement d'environ 30 000 factures fournisseurs."
       >
-        Clearing and reconciliation of approximately 30,000 supplier invoices.
+        Clearing and reconciliation of approximately
+        30,000 supplier invoices.
       </li>
 
       <li
@@ -797,6 +861,7 @@
     </ul>
 
   </div>
+
 
   <div class="experience-card">
 
@@ -825,8 +890,8 @@
         data-en="Managed multi-currency treasury activities across France, the United Kingdom and Germany."
         data-fr="Gestion de la trésorerie multidevises sur les périmètres France, Royaume-Uni et Allemagne."
       >
-        Managed multi-currency treasury activities across France,
-        the United Kingdom and Germany.
+        Managed multi-currency treasury activities across
+        France, the United Kingdom and Germany.
       </li>
 
       <li
@@ -860,6 +925,7 @@
     </ul>
 
   </div>
+
 
   <div class="experience-card">
 
@@ -918,6 +984,9 @@
 
 </section>
 
+
+<!-- EDUCATION -->
+
 <section id="education">
 
   <p
@@ -936,6 +1005,7 @@
     Education
   </h2>
 
+
   <div class="education-grid">
 
     <div class="education-card">
@@ -947,15 +1017,14 @@
         MSc Corporate Finance & Financial Engineering
       </h3>
 
-      <p>
-        INSEEC Paris
-      </p>
+      <p>INSEEC Paris</p>
 
       <p class="date">
         2026
       </p>
 
     </div>
+
 
     <div class="education-card">
 
@@ -966,15 +1035,14 @@
         Master's in Audit & Management Control
       </h3>
 
-      <p>
-        ESG Toulouse
-      </p>
+      <p>ESG Toulouse</p>
 
       <p class="date">
         2024
       </p>
 
     </div>
+
 
     <div class="education-card">
 
@@ -1002,6 +1070,9 @@
 
 </section>
 
+
+<!-- SKILLS -->
+
 <section id="skills">
 
   <p
@@ -1020,13 +1091,12 @@
     Skills & Tools
   </h2>
 
+
   <div class="skills-grid">
 
     <div class="skill-card">
 
-      <h3>
-        Finance
-      </h3>
+      <h3>Finance</h3>
 
       <p
         data-en="Financial analysis, treasury management, financial reporting, management control and accounting."
@@ -1038,11 +1108,10 @@
 
     </div>
 
+
     <div class="skill-card">
 
-      <h3>
-        Data & Reporting
-      </h3>
+      <h3>Data & Reporting</h3>
 
       <p
         data-en="Advanced Excel · Power BI · Financial Reporting"
@@ -1052,6 +1121,7 @@
       </p>
 
     </div>
+
 
     <div class="skill-card">
 
@@ -1067,6 +1137,7 @@
       </p>
 
     </div>
+
 
     <div class="skill-card">
 
@@ -1091,6 +1162,9 @@
 
 </section>
 
+
+<!-- CERTIFICATIONS -->
+
 <section id="certifications">
 
   <p
@@ -1109,13 +1183,12 @@
     Certifications
   </h2>
 
+
   <div class="cert-grid">
 
     <div class="cert-card">
 
-      <h3>
-        FMVA
-      </h3>
+      <h3>FMVA</h3>
 
       <p>
         Corporate Finance Institute
@@ -1126,6 +1199,7 @@
       </span>
 
     </div>
+
 
     <div class="cert-card">
 
@@ -1142,6 +1216,7 @@
       </span>
 
     </div>
+
 
     <div class="cert-card">
 
@@ -1170,6 +1245,9 @@
 
 </section>
 
+
+<!-- SELECTED PROJECTS -->
+
 <section id="projects">
 
   <p
@@ -1197,7 +1275,11 @@
     financial modelling and data visualization projects.
   </p>
 
+
   <div class="projects-grid">
+
+
+    <!-- PROJECT 01 -->
 
     <div class="project-card">
 
@@ -1233,6 +1315,9 @@
 
     </div>
 
+
+    <!-- PROJECT 02 - L'OREAL -->
+
     <div class="project-card">
 
       <div class="project-number">
@@ -1256,7 +1341,7 @@
       </p>
 
       <a
-        href="PASTE-LOREAL-GOOGLE-DRIVE-LINK-HERE"
+        href="https://docs.google.com/spreadsheets/d/1oZQ5oiVRWzf-oCHlIS6IyQYx_ru6obSs/edit?usp=drive_link&ouid=102241395131670006692&rtpof=true&sd=true"
         target="_blank"
         rel="noopener noreferrer"
         class="project-button"
@@ -1267,6 +1352,9 @@
       </a>
 
     </div>
+
+
+    <!-- PROJECT 03 -->
 
     <div class="project-card">
 
@@ -1299,6 +1387,9 @@
   </div>
 
 </section>
+
+
+<!-- CONTACT -->
 
 <section
   id="contact"
@@ -1335,6 +1426,9 @@
 
 </section>
 
+
+<!-- FOOTER -->
+
 <footer>
 
   <span
@@ -1346,7 +1440,10 @@
 
 </footer>
 
+
 <script>
+
+  /* LANGUAGE SWITCH */
 
   function changeLanguage(language) {
 
@@ -1355,40 +1452,37 @@
         "[data-en][data-fr]"
       );
 
-    elements.forEach(
-      function(element) {
+    elements.forEach(function(element) {
 
-        if (language === "fr") {
+      if (language === "fr") {
 
-          element.innerHTML =
-            element.getAttribute(
-              "data-fr"
-            );
+        element.innerHTML =
+          element.getAttribute("data-fr");
 
-        } else {
+      } else {
 
-          element.innerHTML =
-            element.getAttribute(
-              "data-en"
-            );
-
-        }
+        element.innerHTML =
+          element.getAttribute("data-en");
 
       }
-    );
 
-    document.documentElement.lang =
-      language;
+    });
+
+
+    document.documentElement.lang = language;
+
 
     document
       .getElementById("btn-en")
       .classList
       .remove("active");
 
+
     document
       .getElementById("btn-fr")
       .classList
       .remove("active");
+
 
     document
       .getElementById(
@@ -1399,12 +1493,16 @@
       .classList
       .add("active");
 
+
     localStorage.setItem(
       "portfolioLanguage",
       language
     );
 
   }
+
+
+  /* FINANCE BACKGROUND SLIDESHOW */
 
   const backgrounds = [
 
@@ -1416,12 +1514,15 @@
 
   ];
 
+
   let currentSlide = 0;
+
 
   function updateBackground() {
 
     const hero =
       document.getElementById("hero");
+
 
     hero.style.backgroundImage =
 
@@ -1433,17 +1534,15 @@
       ),
       url("${backgrounds[currentSlide]}")`;
 
+
     document
       .querySelectorAll(".dot")
-      .forEach(
-        function(dot) {
+      .forEach(function(dot) {
 
-          dot.classList.remove(
-            "active"
-          );
+        dot.classList.remove("active");
 
-        }
-      );
+      });
+
 
     document
       .getElementById(
@@ -1453,6 +1552,7 @@
       .add("active");
 
   }
+
 
   function nextSlide() {
 
@@ -1464,6 +1564,7 @@
 
   }
 
+
   window.addEventListener(
     "DOMContentLoaded",
     function() {
@@ -1474,9 +1575,8 @@
         )
         || "en";
 
-      changeLanguage(
-        savedLanguage
-      );
+
+      changeLanguage(savedLanguage);
 
       updateBackground();
 
@@ -1490,6 +1590,6 @@
 
 </script>
 
-</body>
 
+</body>
 </html>
